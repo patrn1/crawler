@@ -1,0 +1,5 @@
+/.idea
+/vendor
+/phinx.yml
+/.env
+/.env.example
