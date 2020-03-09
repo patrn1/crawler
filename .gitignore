@@ -1,5 +1,5 @@
 /.idea
 /vendor
 /phinx.yml
-/.env
-/.env.example
+/config/.env.php
+/config/proxies.php

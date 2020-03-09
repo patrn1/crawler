@@ -1,5 +1,17 @@
 {
     "require": {
-        "robmorgan/phinx": "^0.11.4"
+        "robmorgan/phinx": "^0.11.4",
+        "illuminate/database": "^7.0",
+        "phpfastcache/phpfastcache": "^7.1"
+    },
+    "scripts": {
+        "post-autoload-dump": [],
+        "post-root-package-install": [
+            "@php -r \"file_exists('config/.env.php') || copy('config/.env.example.php', 'config/.env.php');\""
+        ],
+        "post-create-project-cmd": [
+            "@php vendor/bin/phinx init",
+            "@php vendor/bin/phinx migrate -e development"
+        ]
     }
 }
